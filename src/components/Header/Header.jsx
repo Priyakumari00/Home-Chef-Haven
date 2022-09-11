@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import navLinks from "../../utils/navigation";
 import socials from "../../utils/socials";
+import Button from "../Button/Button";
+import Navigation from "../Navigation/Navigation";
 import "./header.css";
 
 const Header = () => {
@@ -48,7 +50,16 @@ const Header = () => {
 					</ul>
 				</nav>
 			</div>
-			<div className="header-right"></div>
+			<div className="header-right">
+				<Button
+					text="Login"
+					icon="account_circle"
+					color="black"
+					size="small"
+					variant="outline"
+				/>
+				<Navigation />
+			</div>
 		</header>
 	);
 };
