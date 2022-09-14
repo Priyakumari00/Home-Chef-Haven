@@ -41,5 +41,11 @@
   letter-spacing: 0.1rem;
   font-family: "Montserrat", sans-serif;
 }
+.header-right {
+  margin-right: 1rem;
+  /* button {
+      margin-right: 1rem;
+  } */
+}
 
 /*# sourceMappingURL=header.css.map */
