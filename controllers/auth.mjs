@@ -20,7 +20,7 @@ const register = async (req, res) => {
 		if (password.length < 6)
 			return res.status(400).json({
 				message: "Password should be a minimum of 6 characters",
-			}); // If the password length is less than 6 characters, return Status 400 Bad request
+			}); 
 		user = new User({ fname, lname, email, password, username, avatar });
 		user.password = await bcrypt.hash(password, 10);
 		await user.save();

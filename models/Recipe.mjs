@@ -41,3 +41,5 @@ const RecipeSchema = new mongoose.Schema(
 
 const Recipe = mongoose.model("recipe", RecipeSchema);
 export default Recipe;
+
+// model

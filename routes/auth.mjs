@@ -17,3 +17,5 @@ router.put("/edit", auth, editProfile);
 router.get("/profile/:username", getProfile);
 
 export default router;
+
+// router

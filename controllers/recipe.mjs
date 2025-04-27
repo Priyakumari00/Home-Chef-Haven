@@ -7,7 +7,7 @@ const getAllRecipes = async (req, res) => {
 	try {
 		let allRecipes = await Recipe.find({});
 		if (!allRecipes)
-			return res.status(404).json({ message: "No Recipes found" }); // If the database is empty, return Status 404 Not Found
+			return res.status(404).json({ message: "No Recipes found" }); 
 		let recipesToSend = [];
 		for (const recipe of allRecipes) {
 			const res = await getUser(recipe.user);
