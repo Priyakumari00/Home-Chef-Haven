@@ -23,7 +23,7 @@ Search for what you want to cook and Hurray! Impress others with mouth-watering 
 To clone copy the following command in your terminal and start development.
 
 ```sh
-git clone https://github.com/akshatmittal61/flavorsome.git
+git clone https://github.com/Priyakumari00/Home-Chef-Haven.git
 ```
 
 cd into the directory
@@ -67,9 +67,9 @@ Building the .env
 
 # Author
 
-- [Priya Kumari](https://akshatmittal61.vercel.app)
+- [Priya Kumari](home-chef-haven-2e58xicby-priyakumari00s-projects.vercel.app)
 
-# Other Resources
+<!-- # Other Resources
 
 - [FlavorSome Plan](https://docs.google.com/document/d/1Y7bzRBCu1durVcao_jtrZwMTV3Ja2rc97ONm1hG7OH8/)
-- [Figma Prototype](https://www.figma.com/file/nUxAyzwv9jfa1J1Wzb75B3/FlavorSome)
+- [Figma Prototype](https://www.figma.com/file/nUxAyzwv9jfa1J1Wzb75B3/FlavorSome) -->
