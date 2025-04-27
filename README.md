@@ -1,12 +1,12 @@
-# FlavorSome
+# HomeChefHaven
 
-Never miss out on any new food and dishes idea. Share your own reciepies and read others' with FlavorSome.
+Never miss out on any new food and dishes idea. Share your own reciepies and read others' with HomeChefHaven.
 
 ![Recipe](./images/recipe-1.png)
 
 # Introduction
 
- FlavorSome allows you to view various delicious recipes shared by the users and gives you the privilege to share your recipe too!
+ HomeChefHaven allows you to view various delicious recipes shared by the users and gives you the privilege to share your recipe too!
 
 Grab this opportunity now and show the world how amazing your recipes are!
 
@@ -29,7 +29,7 @@ git clone https://github.com/akshatmittal61/flavorsome.git
 cd into the directory
 
 ```sh
-cd flavorsome
+cd homechefhaven
 ```
 
 Install all the dependencies
@@ -67,7 +67,7 @@ Building the .env
 
 # Author
 
-- [Akshat Mittal](https://akshatmittal61.vercel.app)
+- [Priya Kumari](https://akshatmittal61.vercel.app)
 
 # Other Resources
 

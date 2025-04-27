@@ -10,9 +10,9 @@
     "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.2",
+    "dotenv": "^16.5.0",
     "emailjs-com": "^3.2.0",
-    "express": "^4.18.1",
+    "express": "^4.21.2",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.4",
     "mongoose": "^6.6.0",
@@ -23,11 +23,13 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "remark-gfm": "^3.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "ws": "^8.18.1"
   },
   "scripts": {
     "start": "node server.mjs",
-    "react": "react-scripts start",
+    "react": "cross-env PORT=3000 react-scripts start",
+    "dev": "npm run start & npm run react",
     "server": "nodemon server.mjs",
     "sass": "sass src/style.scss:src/style.css src/components/Button/button.scss:src/components/Button/button.css src/components/Navigation/navigation.scss:src/components/Navigation/navigation.css src/components/Footer/footer.scss:src/components/Footer/footer.css src/components/Recipe/recipe.scss:src/components/Recipe/recipe.css src/components/Input/input.scss:src/components/Input/input.css src/components/Header/header.scss:src/components/Header/header.css src/pages/Home/home.scss:src/pages/Home/home.css src/pages/About/about.scss:src/pages/About/about.css src/pages/Write/write.scss:src/pages/Write/write.css src/pages/Contact/contact.scss:src/pages/Contact/contact.css src/pages/Recipe/recipe.scss:src/pages/Recipe/recipe.css src/pages/Search/search.scss:src/pages/Search/search.css src/pages/Profile/profile.scss:src/pages/Profile/profile.css src/pages/Saved/saved.scss:src/pages/Saved/saved.css src/pages/Login/login.scss:src/pages/Login/login.css src/pages/Register/register.scss:src/pages/Register/register.css  src/pages/NotFound/not-found.scss:src/pages/NotFound/not-found.css -w",
     "build": "react-scripts build",
@@ -54,6 +56,7 @@
     ]
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "nodemon": "^2.0.19",
     "sass": "^1.54.9"
   }

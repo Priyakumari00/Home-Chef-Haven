@@ -11,30 +11,31 @@ const Header = () => {
 	return (
 		<header className="header">
 			<div className="header-left">
-				{isAuthenticated ? (
-					<Button
-						text={user.username}
-						icon="account_circle"
-						color="black"
-						size="small"
-						variant="outline"
-						link="/profile"
-						style={{
-							marginRight: "1rem",
-						}}
-					/>
-				) : (
-					socials.map((social, id) => (
-						<a
-							href={social.link}
-							key={id}
-							target="_blank"
-							rel="noreferrer"
-						>
-							{social.icon}
-						</a>
-					))
-				)}
+			{isAuthenticated ? (
+  <Button
+    text={user?.username || "Profile"} // <-- FIXED
+    icon="account_circle"
+    color="black"
+    size="small"
+    variant="outline"
+    link="/profile"
+    style={{
+      marginRight: "1rem",
+    }}
+  />
+) : (
+  socials.map((social, id) => (
+    <a
+      href={social.link}
+      key={id}
+      target="_blank"
+      rel="noreferrer"
+    >
+      {social.icon}
+    </a>
+  ))
+)}
+
 			</div>
 			{!breakpoint("mobile") && (
 				<div className="header-mid">
@@ -54,7 +55,7 @@ const Header = () => {
 						</ul>
 					</nav>
 					<h1>
-						<Link to="/">FlavorSome</Link>
+						<Link to="/">HomeChefHaven</Link>
 					</h1>
 					<nav>
 						<ul>

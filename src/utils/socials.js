@@ -2,32 +2,32 @@ import { GitHub, Linkedin, Mail, Phone, Twitter } from "react-feather";
 
 const socials = [
 	{
-		username: "@akshatmittal61",
-		link: "https://twitter.com/akshatmittal61",
+		username: "PriyaKumar51497",
+		link: "https://x.com/PriyaKumar51497",
 		service: "twitter",
 		icon: <Twitter />,
 	},
 	{
-		username: "@akshatmittal61",
-		link: "https://www.linkedin.com/in/akshatmittal61",
+		username: "priya-kumari-9a7a06242",
+		link: "https://www.linkedin.com/in/priya-kumari-9a7a06242",
 		service: "linkedin",
 		icon: <Linkedin />,
 	},
 	{
-		username: "@akshatmittal61",
-		link: "https://www.github.com/akshatmittal61",
+		username: "Priyakumari00",
+		link: "https://github.com/Priyakumari00",
 		service: "github",
 		icon: <GitHub />,
 	},
 	{
-		username: "+91 94568 49466",
-		link: "tel:919456849466",
+		username: "+91 9366313485",
+		link: "tel: 9366313485",
 		service: "phone",
 		icon: <Phone />,
 	},
 	{
-		username: "akshatmittal2506@gmail.com",
-		link: "mailto:akshatmittal2506@gmail.com",
+		username: "mpriyapkumari@gmail.com",
+		link: "mailto:mpriyapkumari@gmail.com",
 		service: "mail",
 		icon: <Mail />,
 	},

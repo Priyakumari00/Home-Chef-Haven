@@ -43,13 +43,21 @@ const Home = () => {
 										to={`/users/${heroRecipe?.user?.username}`}
 									>
 										<img
-											src={heroRecipe?.user?.avatar}
-											alt={
-												heroRecipe?.user?.fname +
-												" " +
-												heroRecipe?.user?.lname
-											}
-										/>
+  src={
+    heroRecipe?.user?.avatar
+      ? heroRecipe.user.avatar
+      : "https://ui-avatars.com/api/?name=" +
+        heroRecipe?.user?.fname +
+        "+" +
+        heroRecipe?.user?.lname
+  }
+  alt={
+    heroRecipe?.user?.fname +
+    " " +
+    heroRecipe?.user?.lname
+  }
+/>
+
 									</Link>
 								</div>
 								<div className="home-hero-user__details">

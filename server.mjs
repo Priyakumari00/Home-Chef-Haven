@@ -14,7 +14,11 @@ const __dirname = dirname(__fileName);
 config();
 const app = express();
 
-app.use(cors("*"));
+// Corrected CORS
+app.use(cors({
+  origin: "http://localhost:3000",
+  credentials: true,
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -26,7 +30,7 @@ if (process.env.NODE_ENV === "production") {
 	app.get("*", (req, res) => {
 		res.sendFile(path.resolve(__dirname, "build", "index.html"));
 	});
-} // Serve the build files if the app is in production mode
+}
 
 app.listen(PORT, () => {
 	connect();

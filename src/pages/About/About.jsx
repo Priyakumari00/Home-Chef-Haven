@@ -14,9 +14,9 @@ const About = () => {
 			</section>
 			<section className="about-content">
 				<span>About Us</span>
-				<h1>FlavorSome</h1>
+				<h1>HomeChefHaven</h1>
 				<p>
-					FlavorSome allows you to view various delicious recipes
+				HomeChefHaven allows you to view various delicious recipes
 					shared by the users and gives you the privilege to share
 					your recipe too!
 				</p>

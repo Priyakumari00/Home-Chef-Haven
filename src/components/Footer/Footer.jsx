@@ -10,7 +10,7 @@ const Footer = () => {
 		<footer className="footer">
 			<section className="footer-top">
 				<span className="footer-top-first"></span>
-				<div className="footer-top-mid">FlavorSome</div>
+				<div className="footer-top-mid">HomeChefHeaven</div>
 				<span className="footer-top-last"></span>
 			</section>
 			<section className="footer-mid">
@@ -55,11 +55,11 @@ const Footer = () => {
 				<span>
 					Made with ❤ by{" "}
 					<a
-						href="https://akshatmittal61.vercel.app/"
+						href="https://priyakumari00.github.io/PriyaPortfolio/"
 						target="_blank"
 						rel="noreferrer"
 					>
-						Akshat Mittal
+						Priya Kumari
 					</a>
 					.
 				</span>

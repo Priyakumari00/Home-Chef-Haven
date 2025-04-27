@@ -1,3 +1,6 @@
+import axiosInstance from "../utils/axiosInstance";
+
+
 import { createContext } from "react";
 
 const GlobalContext = createContext({
@@ -17,7 +20,7 @@ const GlobalContext = createContext({
 	setUser: () => {},
 	updateUser: () => {},
 	verifyUser: () => {},
-	axiosInstance: undefined,
+	axiosInstance: axiosInstance, // ✅ use the imported instance here
 	recipes: [],
 	setRecipes: () => {},
 	getAllRecipes: () => {},
