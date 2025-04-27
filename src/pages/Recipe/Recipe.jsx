@@ -85,13 +85,15 @@ const Recipe = () => {
 										to={`/users/${recipe?.user?.username}`}
 									>
 										<img
-											src={recipe?.user?.avatar}
-											alt={
-												recipe?.user?.fname +
-												" " +
-												recipe?.user?.lname
-											}
-										/>
+  src={
+    recipe?.user?.avatar
+      ? recipe.user.avatar
+      : `https://ui-avatars.com/api/?name=${encodeURIComponent(
+          recipe.user.fname + " " + recipe.user.lname
+        )}&background=0D8ABC&color=fff&rounded=true`
+  }
+  alt={`${recipe.user.fname} ${recipe.user.lname}`}
+/>
 									</Link>
 								</div>
 								<div className="recipe-user__details">
