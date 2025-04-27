@@ -13,7 +13,7 @@ const auth = (req, res, next) => {
 		next();
 	} catch (err) {
 		console.error(err);
-		res.status(401).json({ message: "Token is not valid" }); // If token is not valid, return Status 401 Not Authorized
+		res.status(401).json({ message: "Token is not valid" });
 	}
 };
 

@@ -5,5 +5,5 @@ export const omit = (obj, key) => {
 	return rest;
 };
 
-// eslint-disable-next-line eqeqeq
+
 export const remove = (arr, value) => arr.filter((ele) => ele != value);
