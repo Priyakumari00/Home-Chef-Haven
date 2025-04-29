@@ -3,6 +3,10 @@
 Never miss out on any new food and dishes idea. Share your own reciepies and read others' with HomeChefHaven.
 
 ![Recipe](./images/recipe-1.png)
+![Recipe](./images/recipe-2.png)
+![Recipe](./images/recipe-3.png)
+![Recipe](./images/recipe-4.png)
+![Recipe](./images/recipe-5.png)
 
 # Introduction
 

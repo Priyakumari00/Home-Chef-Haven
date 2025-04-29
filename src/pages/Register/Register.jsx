@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Back from "../../components/Button/Back";
 import Button from "../../components/Button/Button";
 import Input from "../../components/Input/Input";
+import axiosInstance from "../../utils/axiosInstance";      // ← direct import
 import GlobalContext from "../../context/GlobalContext";
 import Row, { Col } from "../../layout/Responsive";
 import { registerBg } from "../../utils/images";
@@ -19,8 +20,7 @@ const Register = () => {
     avatar: "",
   });
 
-  // pull axiosInstance out of context (with correct baseURL & headers)
-  const { axiosInstance, setSnack, setOpenSnackBar, setIsLoading } =
+  const { setSnack, setOpenSnackBar, setIsLoading } =
     useContext(GlobalContext);
   const navigate = useNavigate();
 
@@ -31,7 +31,6 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (registerUser.password !== registerUser.confirmPassword) {
       setSnack({
         text: "Passwords do not match",
@@ -45,20 +44,13 @@ const Register = () => {
 
     try {
       setIsLoading(true);
-      const res = await axiosInstance.post(
-        "/api/auth/register",
-        registerUser
-      );
-      setIsLoading(false);
+      // ← this goes to http://localhost:5000/api/auth/register
+      const res = await axiosInstance.post("/api/auth/register", registerUser);
 
-      // accept 200, 201, or 204 as success
-      if (
-        res.status === 200 ||
-        res.status === 201 ||
-        res.status === 204
-      ) {
+      setIsLoading(false);
+      if (res.status === 200) {
         setSnack({
-          text: res.data?.message || "Registration successful!",
+          text: res.data.message,
           bgColor: "var(--green)",
           color: "var(--white)",
         });
@@ -69,8 +61,7 @@ const Register = () => {
     } catch (error) {
       setIsLoading(false);
       setSnack({
-        text:
-          error?.response?.data?.message || "Registration failed",
+        text: error?.response?.data?.message || "Registration failed",
         bgColor: "var(--red)",
         color: "var(--white)",
       });
@@ -85,7 +76,7 @@ const Register = () => {
         className="register-side"
         style={{ backgroundImage: `url(${registerBg})` }}
         data-aos="fade-in"
-      />
+      ></aside>
       <Back />
       <section className="register-page">
         <div className="register-container">
@@ -173,8 +164,10 @@ const Register = () => {
             <Button text="Sign Up" type="submit" />
           </form>
           <div className="register-signup">
-            <span>Already have an account? </span>
-            <Link to="/login">Log In</Link>
+            <div>
+              <span>Already have an account? </span>
+              <Link to="/login">Log In</Link>
+            </div>
           </div>
         </div>
       </section>
